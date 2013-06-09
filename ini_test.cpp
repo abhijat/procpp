@@ -9,5 +9,6 @@ class SomeClass
 int main()
 {
     SomeClass someObj;
+    someObj.mName = "Hi there";
     return 0;
 }
