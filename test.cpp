@@ -6,7 +6,7 @@ using std::endl;
 
 void test_func()
 {
-    // Testing copy constructor
+    // This is a test
     SpreadsheetCell* spCell = new SpreadsheetCell();
     spCell->setString("100010");
     SpreadsheetCell spCell2 = *spCell;
