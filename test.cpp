@@ -6,8 +6,11 @@ using std::endl;
 
 void test_func()
 {
-    SpreadsheetCell spCell(5);
-    cout << spCell.getValue() << endl;
+    // Testing the default constructor
+    SpreadsheetCell* spCell = new SpreadsheetCell();
+    cout << spCell->getValue() << endl;
+    delete spCell;
+    spCell = NULL;
 }
 
 int main()

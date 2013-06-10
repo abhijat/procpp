@@ -3,7 +3,9 @@
 class SpreadsheetCell
 {
     public:
+        SpreadsheetCell();
         SpreadsheetCell(double initialValue);
+        SpreadsheetCell(const std::string& initialValue);
         void setValue(double inValue);
         double getValue() const;
         void setString(std::string inString);

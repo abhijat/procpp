@@ -4,9 +4,18 @@
 
 using namespace std;
 
+SpreadsheetCell::SpreadsheetCell() : mValue(0), mString()
+{
+}
+
 SpreadsheetCell::SpreadsheetCell(double initialValue)
 {
     setValue(initialValue);
+}
+
+SpreadsheetCell::SpreadsheetCell(const string& initialValue)
+{
+    setString(initialValue);
 }
 
 void SpreadsheetCell::setValue(double inValue)
