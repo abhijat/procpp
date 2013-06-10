@@ -6,6 +6,7 @@ class SpreadsheetCell
         SpreadsheetCell();
         SpreadsheetCell(double initialValue);
         SpreadsheetCell(const std::string& initialValue);
+        SpreadsheetCell(const SpreadsheetCell& src);
         void setValue(double inValue);
         double getValue() const;
         void setString(std::string inString);

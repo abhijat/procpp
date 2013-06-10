@@ -18,6 +18,11 @@ SpreadsheetCell::SpreadsheetCell(const string& initialValue)
     setString(initialValue);
 }
 
+SpreadsheetCell::SpreadsheetCell(const SpreadsheetCell& src) : 
+    mValue(src.mValue), mString(src.mString)
+{
+}
+
 void SpreadsheetCell::setValue(double inValue)
 {
     mValue = inValue;
