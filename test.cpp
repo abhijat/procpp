@@ -6,10 +6,10 @@ using std::endl;
 
 void test_func()
 {
-    // This is a test
     SpreadsheetCell* spCell = new SpreadsheetCell();
     spCell->setString("100010");
-    SpreadsheetCell spCell2 = *spCell;
+    SpreadsheetCell spCell2;
+    spCell2 = *spCell;
     cout << spCell2.getValue() << endl;
     delete spCell;
     spCell = NULL;

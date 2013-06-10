@@ -23,6 +23,16 @@ SpreadsheetCell::SpreadsheetCell(const SpreadsheetCell& src) :
 {
 }
 
+SpreadsheetCell& SpreadsheetCell::operator=(const SpreadsheetCell& rhs)
+{
+    cout << "Assignment";
+    if (this != &rhs) {
+        mValue = rhs.mValue;
+        mString = rhs.mString;
+    }
+    return *this;
+}
+
 void SpreadsheetCell::setValue(double inValue)
 {
     mValue = inValue;
@@ -34,7 +44,7 @@ double SpreadsheetCell::getValue() const
     return mValue;
 }
 
-void SpreadsheetCell::setString(string inString)
+void SpreadsheetCell::setString(const string& inString)
 {
     mString = inString;
     mValue = stringToDouble(mString);
@@ -52,7 +62,7 @@ string SpreadsheetCell::doubleToString(double inValue) const
     return ostr.str();
 }
 
-double SpreadsheetCell::stringToDouble(string inString) const
+double SpreadsheetCell::stringToDouble(const string& inString) const
 {
     double temp;
     istringstream istr(inString);
