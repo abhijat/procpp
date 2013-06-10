@@ -12,7 +12,6 @@ void test_func()
     spCell2 = *spCell;
     cout << spCell2.getValue() << endl;
     delete spCell;
-    spCell = NULL;
 }
 
 int main()
